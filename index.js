@@ -6,11 +6,11 @@ function getComputerChoice(computer) {
     console.log(computer);
 
     if (computer === 0) {                               // Assign Rock, Paper or Scissor to random Number
-        computer = `Rock`;
+        computer = `rock`;
     } else if (computer === 1) {
-        computer = `Paper`;
+        computer = `paper`;
     } else {
-        computer =`Scissor`;
+        computer =`scissor`;
     }
     console.log(computer);
     return computer;
@@ -21,7 +21,6 @@ function getComputerChoice(computer) {
 function getHumanChoice() {                                                         //Get player choice
     return prompt(`Please choose between Rock, Paper and Scissor.`);                //Let user choose his play
 }
-
 //  -----
 
 //Score tracker
@@ -31,11 +30,11 @@ let computerScore = 0;
 
 //Round script
 function playRound (humanChoice, computerChoice) {
-
+    humanChoice = humanChoice.toLowerCase();
+    console.log(humanChoice);
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
-console.log(playRound());
