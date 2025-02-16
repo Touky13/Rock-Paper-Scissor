@@ -1,9 +1,9 @@
-console.log(`Hello World`);                             //html link test
+//console.log(`Hello World`);                             //html link test
 
 //Computer
 function getComputerChoice(computer) {                  
     computer = Math.floor(Math.random() * 3);           // Create a random number between 0 and 2
-    console.log(computer);
+    //console.log(computer);
 
     if (computer === 0) {                               // Assign Rock, Paper or Scissor to random Number
         computer = `rock`;
@@ -35,18 +35,23 @@ function playGame() {
         console.log(`Player : ` + humanChoice);
     
         if (humanChoice === computerChoice) {                                           // I'm going to hell for this
+            alert(`"It's a draw".\nThe score is Computer : ` + computerScore + `  human : ` + humanScore);
             console.log("It's a draw");                                                 // Draw if strings are equals
         } else  {
             if (computerChoice === `rock` && humanChoice === `scissor`) {               
+                alert(`You lose! ${computerChoice} beats ${humanChoice}.\nThe score is Computer : ` + computerScore + `  human : ` + humanScore);
                 console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //rock > scissor
                 computerScore ++;                                                       //Increment score
             } else if (computerChoice === `scissor` && humanChoice === `paper`) {       
+                alert(`You lose! ${computerChoice} beats ${humanChoice}.\nThe score is Computer : ` + computerScore + `  human : ` + humanScore);
                 console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //scissor > paper
                 computerScore ++;                                                       //Increment score
             } else if (computerChoice === `paper` && humanChoice === `rock`) {
+                alert(`You lose! ${computerChoice} beats ${humanChoice}.\nThe score is Computer : ` + computerScore + `  human : ` + humanScore);
                 console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //paper > rock
                 computerScore ++;                                                       //Increment score
             } else {
+                alert(`You win! ${humanChoice} beats ${computerChoice}.\nThe score is Computer : ` + computerScore + `  human : ` + humanScore);
                 console.log(`You win! ${humanChoice} beats ${computerChoice}.`);        //player win
                 humanScore ++;                                                          //Increment player score
             }
@@ -80,5 +85,7 @@ humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
 playGame ();
 console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
+
+alert(`The final score is\n Computer : ` + computerScore + `  human : ` + humanScore )
 //  -----
 
