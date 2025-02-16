@@ -55,9 +55,29 @@ function playGame() {
     playRound(humanSelection, computerSelection);
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
 
+playGame ();
+console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
+
+humanSelection = getHumanChoice();                                                      //Straying further and further from the light
+computerSelection = getComputerChoice();
+playGame ();
+console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+playGame ();
+console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+playGame ();
+console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
 playGame ();
 console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
 //  -----
