@@ -17,21 +17,25 @@ console.log(computer);
 //  -----
 
 //Human
-function getHumanChoice() {                                                 //Get player choice
-    let humanChoice = prompt(`Please choose between Rock, Paper and Scissor.`);   //Let user choose his play
+function getHumanChoice() {                                                         //Get player choice
+    let humanChoice = prompt(`Please choose between Rock, Paper and Scissor.`);     //Let user choose his play
 console.log(humanChoice);
 
-        humanChoice = humanChoice.toLowerCase();                                        //Convert to lower case for compatibility
+        humanChoice = humanChoice.toLowerCase();                                    //Convert to lower case for compatibility
 console.log(humanChoice);
 }
 
-getHumanChoice();
+getHumanChoice();                                                                   //Call function
 //  -----
 
-//Score logic
+//Score tracker
 let humanScore = 0;
 let computerScore = 0;
 //  -----
 
 //Round script
+function playRound (playerChoice, computerChoice) {
+    
+}
 
+playRound (humanChoice, computer);
