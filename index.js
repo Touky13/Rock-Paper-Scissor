@@ -12,7 +12,7 @@ function getComputerChoice(computer) {
     } else {
         computer =`scissor`;
     }
-    console.log(computer);
+    console.log(`Computer : ` + computer);
     return computer;
 }
 //  -----
@@ -30,20 +30,24 @@ let computerScore = 0;
 
 //Round script
 function playRound (humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase();                            //Convert in lower case                  
-    console.log(humanChoice);
+    humanChoice = humanChoice.toLowerCase();                                        //Convert in lower case                  
+    console.log(`Player : ` + humanChoice);
 
-    if (humanChoice === computerChoice) {
-        console.log("It's a draw");
+    if (humanChoice === computerChoice) {                                           // I'm going to hell for this
+        console.log("It's a draw");                                                 // Draw if strings are equals
     } else  {
-        if (computerChoice === `rock` && humanChoice === `scissor`) {
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
-        } else if (computerChoice === `scissor` && humanChoice === `paper`) {
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        if (computerChoice === `rock` && humanChoice === `scissor`) {               
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //rock > scissor
+            computerScore ++;                                                       //Increment score
+        } else if (computerChoice === `scissor` && humanChoice === `paper`) {       
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //scissor > paper
+            computerScore ++;                                                       //Increment score
         } else if (computerChoice === `paper` && humanChoice === `rock`) {
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //paper > rock
+            computerScore ++;                                                       //Increment score
         } else {
-            console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+            console.log(`You win! ${humanChoice} beats ${computerChoice}.`);        //player win
+            humanScore ++;                                                          //Increment player score
         }
     }
 }
@@ -52,3 +56,5 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+console.log(computerScore, humanScore);
+//  -----
