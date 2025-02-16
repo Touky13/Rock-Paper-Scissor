@@ -18,14 +18,10 @@ console.log(computer);
 
 //Human
 function getHumanChoice() {                                                         //Get player choice
-    let humanChoice = prompt(`Please choose between Rock, Paper and Scissor.`);     //Let user choose his play
-console.log(humanChoice);
-
-        humanChoice = humanChoice.toLowerCase();                                    //Convert to lower case for compatibility
-console.log(humanChoice);
+    return prompt(`Please choose between Rock, Paper and Scissor.`);                //Let user choose his play
 }
 
-getHumanChoice();                                                                   //Call function
+console.log(getHumanChoice());                                                      //Call function
 //  -----
 
 //Score tracker
@@ -37,5 +33,3 @@ let computerScore = 0;
 function playRound (playerChoice, computerChoice) {
     
 }
-
-playRound (humanChoice, computer);
