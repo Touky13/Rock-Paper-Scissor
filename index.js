@@ -18,8 +18,8 @@ function getComputerChoice(computer) {
 //  -----
 
 //Human
-function getHumanChoice() {                                                         //Get player choice
-    return prompt(`Please choose between Rock, Paper and Scissor.`);                //Let user choose his play
+function getHumanChoice() {                                                 //Get player choice
+    return prompt(`Please choose between Rock, Paper and Scissor.`);        //Let user choose his play
 }
 //  -----
 
@@ -30,8 +30,22 @@ let computerScore = 0;
 
 //Round script
 function playRound (humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase();
+    humanChoice = humanChoice.toLowerCase();                            //Convert in lower case                  
     console.log(humanChoice);
+
+    if (humanChoice === computerChoice) {
+        console.log("It's a draw");
+    } else  {
+        if (computerChoice === `rock` && humanChoice === `scissor`) {
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        } else if (computerChoice === `scissor` && humanChoice === `paper`) {
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        } else if (computerChoice === `paper` && humanChoice === `rock`) {
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        } else {
+            console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+        }
+    }
 }
 
 const humanSelection = getHumanChoice();
