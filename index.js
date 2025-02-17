@@ -18,8 +18,15 @@ function getComputerChoice(computer) {
 //  -----
 
 //Human
-function getHumanChoice() {                                                 //Get player choice
-    return prompt(`Please choose between Rock, Paper and Scissor.`);        //Let user choose his play
+function getHumanChoice() {                                                                     //Get player choice
+    let answer = prompt(`Please choose between Rock, Paper and Scissor.`).toLowerCase();        //Let user choose his play
+        if (answer === `rock` || answer === `paper` || answer === `scissor`) {
+            return answer
+        }
+        else {
+            alert(`Incorrect choice. Please choose a valid input`);
+            return getHumanChoice();
+        }
 }
 //  -----
 
@@ -31,7 +38,7 @@ let computerScore = 0;
 //Round script
 function playGame() {
     function playRound (humanChoice, computerChoice) {
-        humanChoice = humanChoice.toLowerCase();                                        //Convert in lower case                  
+        //humanChoice = humanChoice.toLowerCase();                                        //Convert in lower case                  
         console.log(`Player : ` + humanChoice);
     
         if (humanChoice === computerChoice) {                                           // I'm going to hell for this
