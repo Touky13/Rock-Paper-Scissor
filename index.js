@@ -5,12 +5,12 @@ function getComputerChoice(computer) {
     computer = Math.floor(Math.random() * 3);           // Create a random number between 0 and 2
     //console.log(computer);
 
-    if (computer === 0) {                               // Assign Rock, Paper or Scissor to random Number
+    if (computer === 0) {                               // Assign Rock, Paper or Scissors to random Number
         computer = `rock`;
     } else if (computer === 1) {
         computer = `paper`;
     } else {
-        computer =`scissor`;
+        computer =`scissors`;
     }
     console.log(`Computer : ` + computer);
     return computer;
@@ -19,8 +19,8 @@ function getComputerChoice(computer) {
 
 //Human
 function getHumanChoice() {                                                                     //Get player choice
-    let answer = prompt(`Please choose between Rock, Paper and Scissor.`).toLowerCase();        //Let user choose his play
-        if (answer === `rock` || answer === `paper` || answer === `scissor`) {
+    let answer = prompt(`Please choose between Rock, Paper and Scissors.`).toLowerCase();        //Let user choose his play
+        if (answer === `rock` || answer === `paper` || answer === `scissors`) {
             return answer
         }
         else {
@@ -45,14 +45,14 @@ function playGame() {
             alert(`"It's a draw".\nThe score is Computer : ` + computerScore + `  human : ` + humanScore);
             console.log("It's a draw");                                                 // Draw if strings are equals
         } else  {
-            if (computerChoice === `rock` && humanChoice === `scissor`) {               
+            if (computerChoice === `rock` && humanChoice === `scissors`) {               
                 computerScore ++;                                                       //Increment score
                 alert(`You lose! ${computerChoice} beats ${humanChoice}.\nThe score is Computer : ` + computerScore + `  human : ` + humanScore);
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //rock > scissor
-            } else if (computerChoice === `scissor` && humanChoice === `paper`) {       
+                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //rock > scissors
+            } else if (computerChoice === `scissors` && humanChoice === `paper`) {       
                 computerScore ++;                                                       //Increment score
                 alert(`You lose! ${computerChoice} beats ${humanChoice}.\nThe score is Computer : ` + computerScore + `  human : ` + humanScore);
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //scissor > paper
+                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //scissors > paper
             } else if (computerChoice === `paper` && humanChoice === `rock`) {
                 computerScore ++;                                                       //Increment score
                 alert(`You lose! ${computerChoice} beats ${humanChoice}.\nThe score is Computer : ` + computerScore + `  human : ` + humanScore);
