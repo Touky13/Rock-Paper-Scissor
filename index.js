@@ -79,6 +79,7 @@ function playGame() {
 const rockBtn = document.querySelector ("#rockBtn");
 const paperBtn = document.querySelector ("#paperBtn");
 const scissorsBtn = document.querySelector ("#scissorsBtn");
+const resetBtn = document.querySelector ("#resetBtn");
 
 function rockClicked () {
     humanSelection = "rock";
@@ -95,11 +96,20 @@ function scissorsClicked () {
     computerSelection = getComputerChoice();
     playGame ();
 }
-
+function resetClicked () {
+    humanScore = 0;
+    computerScore = 0;
+    totalScore = 0;
+    computerSelectionDisplay.textContent = (`Computer : `);
+    playerSelectionDisplay.textContent = (`Player : `);
+    roundResult.textContent = (``);
+    score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
+}
 
 rockBtn.addEventListener("click", rockClicked);
 paperBtn.addEventListener("click", paperClicked);
 scissorsBtn.addEventListener("click", scissorsClicked);
+resetBtn.addEventListener("click", resetClicked);
 
 const computerSelectionDisplay = document.querySelector ("#computerSelection");
 const playerSelectionDisplay = document.querySelector ("#playerSelection");
