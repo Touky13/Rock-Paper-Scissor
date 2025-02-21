@@ -18,7 +18,7 @@ function getComputerChoice(computer) {
 //  -----
 
 //Human
-function getHumanChoice() {                                                                     //Get player choice
+/*function getHumanChoice() {                                                                     //Get player choice
     let answer = prompt(`Please choose between Rock, Paper and Scissors.`).toLowerCase();        //Let user choose his play
         if (answer === `rock` || answer === `paper` || answer === `scissors`) {
             return answer
@@ -27,7 +27,7 @@ function getHumanChoice() {                                                     
             alert(`Incorrect choice. Please choose a valid input`);
             return getHumanChoice();
         }
-}
+}*/
 //  -----
 
 //Score tracker
@@ -68,11 +68,38 @@ function playGame() {
 }
 
 
-let humanSelection = getHumanChoice();
+//let humanSelection = getHumanChoice();
 let computerSelection = getComputerChoice();
 
-playGame ();
+
 console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
+
+const rockBtn = document.querySelector ("#rockBtn");
+const paperBtn = document.querySelector ("#paperBtn");
+const scissorsBtn = document.querySelector ("#scissorsBtn");
+
+function rockClicked () {
+    humanSelection = "rock";
+    console.log(humanSelection);
+    playGame ();
+}
+function paperClicked () {
+    humanSelection = "paper";
+    console.log(humanSelection);
+    playGame ();
+}
+function scissorsClicked () {
+    humanSelection = "scissors";
+    console.log(humanSelection);
+    playGame ();
+}
+
+
+rockBtn.addEventListener("click", rockClicked);
+paperBtn.addEventListener("click", paperClicked);
+scissorsBtn.addEventListener("click", scissorsClicked);
+
+
 
 /*humanSelection = getHumanChoice();                                                      //Straying further and further from the light
 computerSelection = getComputerChoice();
