@@ -64,6 +64,8 @@ function playGame() {
             }
         }
     }
+    console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
+    //alert(`The final score is\n Computer : ` + computerScore + `  human : ` + humanScore )
     playRound(humanSelection, computerSelection);
 }
 
@@ -71,7 +73,6 @@ function playGame() {
 //let humanSelection = getHumanChoice();
 
 
-console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
 
 const rockBtn = document.querySelector ("#rockBtn");
 const paperBtn = document.querySelector ("#paperBtn");
@@ -80,19 +81,16 @@ const scissorsBtn = document.querySelector ("#scissorsBtn");
 function rockClicked () {
     humanSelection = "rock";
     computerSelection = getComputerChoice();
-    console.log(humanSelection);
     playGame ();
 }
 function paperClicked () {
     humanSelection = "paper";
     computerSelection = getComputerChoice();
-    console.log(humanSelection);
     playGame ();
 }
 function scissorsClicked () {
     humanSelection = "scissors";
     computerSelection = getComputerChoice();
-    console.log(humanSelection);
     playGame ();
 }
 
@@ -123,6 +121,5 @@ computerSelection = getComputerChoice();
 playGame ();
 console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
 */
-alert(`The final score is\n Computer : ` + computerScore + `  human : ` + humanScore )
-//  -----
+
 
