@@ -1,4 +1,4 @@
-console.log(`Hello World`);                             //html link test
+//console.log(`Hello World`);                             //html link test
 
 //Computer
 function getComputerChoice(computer) {                  
@@ -67,13 +67,14 @@ function playGame() {
     playRound(humanSelection, computerSelection);
 }
 
+
 let humanSelection = getHumanChoice();
 let computerSelection = getComputerChoice();
 
 playGame ();
 console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
 
-humanSelection = getHumanChoice();                                                      //Straying further and further from the light
+/*humanSelection = getHumanChoice();                                                      //Straying further and further from the light
 computerSelection = getComputerChoice();
 playGame ();
 console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
@@ -92,7 +93,7 @@ humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
 playGame ();
 console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
-
+*/
 alert(`The final score is\n Computer : ` + computerScore + `  human : ` + humanScore )
 //  -----
 
