@@ -29,37 +29,37 @@ function winner() {
 }
 
 function playGame() {
-    function playRound (humanChoice, computerChoice) {
-        playerSelectionDisplay.textContent = (`Player : ` + humanChoice);
+    function playRound (humanSelection, computerSelection) {
+        playerSelectionDisplay.textContent = (`Player : ` + humanSelection);
 
-        if (humanChoice === computerChoice) {                                           
+        if (humanSelection === computerSelection) {                                           
             roundResult.textContent = (`"It's a draw"`);
             score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
         } else  {
-            if (computerChoice === `rock` && humanChoice === `scissors`) {               
+            if (computerSelection === `rock` && humanSelection === `scissors`) {               
                 computerScore++;                                                       
-                roundResult.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
+                roundResult.textContent = (`You lose! ${computerSelection} beats ${humanSelection}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 totalScore = Math.max(humanScore, computerScore);
                 console.log(totalScore);
                 if (totalScore === 5) {winner()};
-            } else if (computerChoice === `scissors` && humanChoice === `paper`) {       
+            } else if (computerSelection === `scissors` && humanSelection === `paper`) {       
                 computerScore++;                                                       
-                roundResult.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
+                roundResult.textContent = (`You lose! ${computerSelection} beats ${humanSelection}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 totalScore = Math.max(humanScore, computerScore);
                 console.log(totalScore);
                 if (totalScore === 5) {winner()};
-            } else if (computerChoice === `paper` && humanChoice === `rock`) {
+            } else if (computerSelection === `paper` && humanSelection === `rock`) {
                 computerScore++;                                                       
-                roundResult.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
+                roundResult.textContent = (`You lose! ${computerSelection} beats ${humanSelection}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 totalScore = Math.max(humanScore, computerScore);
                 console.log(totalScore);
                 if (totalScore === 5) {winner()};
             } else {
                 humanScore++;                                                          
-                roundResult.textContent = (`You win! ${humanChoice} beats ${computerChoice}.`);
+                roundResult.textContent = (`You win! ${humanSelection} beats ${computerSelection}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 totalScore = Math.max(humanScore, computerScore);
                 console.log(totalScore);
@@ -67,7 +67,7 @@ function playGame() {
             }
         }
     }
-    playRound(humanSelection, computerSelection);
+    return playRound(humanSelection, computerSelection);
 }
 
 const rockBtn = document.querySelector ("#rockBtn");
@@ -95,7 +95,7 @@ rockBtn.addEventListener("click", rockClicked);
 paperBtn.addEventListener("click", paperClicked);
 scissorsBtn.addEventListener("click", scissorsClicked);
 
-const score = document.querySelector ("#score");
 const computerSelectionDisplay = document.querySelector ("#computerSelection");
 const playerSelectionDisplay = document.querySelector ("#playerSelection");
 const roundResult = document.querySelector ("#roundResult");
+const score = document.querySelector ("#score");
