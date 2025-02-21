@@ -21,12 +21,18 @@ function winner() {
                 alert(`The player win !`);
                 humanScore = 0;
                 computerScore = 0;
+                computerSelectionDisplay.textContent = (`Computer : `);
+                playerSelectionDisplay.textContent = (`Player : `);
+                roundResult.textContent = (``);
                 score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
 
             } else {
                 alert(`The computer win !`);
                 humanScore = 0;
                 computerScore = 0;
+                computerSelectionDisplay.textContent = (`Computer : `);
+                playerSelectionDisplay.textContent = (`Player : `);
+                roundResult.textContent = (``);
                 score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
 
             }
