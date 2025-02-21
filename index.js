@@ -18,7 +18,7 @@ let computerScore = 0;
 function winner() {
         let winner = Math.max(humanScore, computerScore);
             if (winner === humanScore) {
-                alert(`The player win !`);
+                confirm(`The player win !`);
                 humanScore = 0;
                 computerScore = 0;
                 computerSelectionDisplay.textContent = (`Computer : `);
@@ -27,7 +27,7 @@ function winner() {
                 score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
 
             } else {
-                alert(`The computer win !`);
+                confirm(`The computer win !`);
                 humanScore = 0;
                 computerScore = 0;
                 computerSelectionDisplay.textContent = (`Computer : `);
@@ -49,26 +49,26 @@ function playGame() {
             if (computerSelection === `rock` && humanSelection === `scissors`) {               
                 computerScore++;                                                       
                 roundResult.textContent = (`You lose! ${computerSelection} beats ${humanSelection}.`);
-                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 totalScore = Math.max(humanScore, computerScore);
+                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 if (totalScore === 5) {winner()};
             } else if (computerSelection === `scissors` && humanSelection === `paper`) {       
                 computerScore++;                                                       
                 roundResult.textContent = (`You lose! ${computerSelection} beats ${humanSelection}.`);
-                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 totalScore = Math.max(humanScore, computerScore);
+                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 if (totalScore === 5) {winner()};
             } else if (computerSelection === `paper` && humanSelection === `rock`) {
                 computerScore++;                                                       
                 roundResult.textContent = (`You lose! ${computerSelection} beats ${humanSelection}.`);
-                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 totalScore = Math.max(humanScore, computerScore);
+                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 if (totalScore === 5) {winner()};
             } else {
                 humanScore++;                                                          
                 roundResult.textContent = (`You win! ${humanSelection} beats ${computerSelection}.`);
-                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 totalScore = Math.max(humanScore, computerScore);
+                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 if (totalScore === 5) {winner()};
             }
         }
