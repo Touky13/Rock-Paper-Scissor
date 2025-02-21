@@ -103,7 +103,7 @@ rockBtn.addEventListener("click", rockClicked);
 paperBtn.addEventListener("click", paperClicked);
 scissorsBtn.addEventListener("click", scissorsClicked);
 
-const score = document.querySelector (".score");
+const score = document.querySelector ("#score");
 
 /*humanSelection = getHumanChoice();                                                      //Straying further and further from the light
 computerSelection = getComputerChoice();
