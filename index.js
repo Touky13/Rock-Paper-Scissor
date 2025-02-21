@@ -1,5 +1,3 @@
-//console.log(`Hello World`);                             //html link test
-
 //Computer
 function getComputerChoice(computer) {                  
     computer = Math.floor(Math.random() * 3);           // Create a random number between 0 and 2
@@ -39,31 +37,31 @@ let computerScore = 0;
 function playGame() {
     function playRound (humanChoice, computerChoice) {
         //humanChoice = humanChoice.toLowerCase();                                        //Convert in lower case                  
-        console.log(`Player : ` + humanChoice);
+        playerSelectionDisplay.textContent = (`Player : ` + humanChoice);
     
         if (humanChoice === computerChoice) {                                           // I'm going to hell for this
-            console.log(`"It's a draw"`);
+            roundResult.textContent = (`"It's a draw"`);
             score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
             //console.log("It's a draw");                                                 // Draw if strings are equals
         } else  {
             if (computerChoice === `rock` && humanChoice === `scissors`) {               
                 computerScore ++;                                                       //Increment score
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+                roundResult.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
                 //console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //rock > scissors
             } else if (computerChoice === `scissors` && humanChoice === `paper`) {       
                 computerScore ++;                                                       //Increment score
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+                roundResult.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
                 //console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //scissors > paper
             } else if (computerChoice === `paper` && humanChoice === `rock`) {
                 computerScore ++;                                                       //Increment score
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+                roundResult.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
                 //console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //paper > rock
             } else {
                 humanScore ++;                                                          //Increment player score
-                console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+                roundResult.textContent = (`You win! ${humanChoice} beats ${computerChoice}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
                 //console.log(`You win! ${humanChoice} beats ${computerChoice}.`);        //player win
             }
@@ -105,6 +103,9 @@ scissorsBtn.addEventListener("click", scissorsClicked);
 
 const score = document.querySelector ("#score");
 const computerSelectionDisplay = document.querySelector ("#computerSelection");
+const playerSelectionDisplay = document.querySelector ("#playerSelection");
+const roundResult = document.querySelector ("#roundResult");
+
 
 /*humanSelection = getHumanChoice();                                                      //Straying further and further from the light
 computerSelection = getComputerChoice();
