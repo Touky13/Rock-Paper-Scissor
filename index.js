@@ -12,7 +12,7 @@ function getComputerChoice(computer) {
     } else {
         computer =`scissors`;
     }
-    console.log(`Computer : ` + computer);
+    computerSelectionDisplay.textContent = (`Computer : ` + computer);
     return computer;
 }
 //  -----
@@ -104,6 +104,7 @@ paperBtn.addEventListener("click", paperClicked);
 scissorsBtn.addEventListener("click", scissorsClicked);
 
 const score = document.querySelector ("#score");
+const computerSelectionDisplay = document.querySelector ("#computerSelection");
 
 /*humanSelection = getHumanChoice();                                                      //Straying further and further from the light
 computerSelection = getComputerChoice();
