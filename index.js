@@ -69,7 +69,6 @@ function playGame() {
 
 
 //let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
 
 
 console.log(`Computer score : ` + computerScore, `human score : ` + humanScore);
@@ -80,16 +79,19 @@ const scissorsBtn = document.querySelector ("#scissorsBtn");
 
 function rockClicked () {
     humanSelection = "rock";
+    computerSelection = getComputerChoice();
     console.log(humanSelection);
     playGame ();
 }
 function paperClicked () {
     humanSelection = "paper";
+    computerSelection = getComputerChoice();
     console.log(humanSelection);
     playGame ();
 }
 function scissorsClicked () {
     humanSelection = "scissors";
+    computerSelection = getComputerChoice();
     console.log(humanSelection);
     playGame ();
 }
