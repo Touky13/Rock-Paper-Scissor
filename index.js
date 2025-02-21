@@ -1,7 +1,6 @@
 //Computer
 function getComputerChoice(computer) {                  
     computer = Math.floor(Math.random() * 3);           // Create a random number between 0 and 2
-    //console.log(computer);
 
     if (computer === 0) {                               // Assign Rock, Paper or Scissors to random Number
         computer = `rock`;
@@ -31,39 +30,46 @@ function getComputerChoice(computer) {
 //Score tracker
 let humanScore = 0;
 let computerScore = 0;
+let totalScore = humanScore + computerScore;
+console.log(totalScore);
 //  -----
 
 //Round script
 function playGame() {
     function playRound (humanChoice, computerChoice) {
-        //humanChoice = humanChoice.toLowerCase();                                        //Convert in lower case                  
         playerSelectionDisplay.textContent = (`Player : ` + humanChoice);
-    
-        if (humanChoice === computerChoice) {                                           // I'm going to hell for this
+        let totalScore = humanScore + computerScore;
+        console.log(totalScore);
+
+        if (totalScore === 5) {
+            let winner = Math.max(humanScore, computerScore);
+            //let winnerName = Math.max(humanScore, computerChoice);
+                if (winner === humanScore) {
+                    alert(`The player win with ${winner} points !`);
+                } else {
+                    alert(`The computer win with ${winner} points !`);
+                }
+
+        } else if (humanChoice === computerChoice) {                                           // I'm going to hell for this
             roundResult.textContent = (`"It's a draw"`);
             score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
-            //console.log("It's a draw");                                                 // Draw if strings are equals
         } else  {
             if (computerChoice === `rock` && humanChoice === `scissors`) {               
                 computerScore ++;                                                       //Increment score
                 roundResult.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
-                //console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //rock > scissors
             } else if (computerChoice === `scissors` && humanChoice === `paper`) {       
                 computerScore ++;                                                       //Increment score
                 roundResult.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
-                //console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //scissors > paper
             } else if (computerChoice === `paper` && humanChoice === `rock`) {
                 computerScore ++;                                                       //Increment score
                 roundResult.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
-                //console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);       //paper > rock
             } else {
                 humanScore ++;                                                          //Increment player score
                 roundResult.textContent = (`You win! ${humanChoice} beats ${computerChoice}.`);
                 score.textContent = (`The score is Computer : ` + computerScore + `  human : ` + humanScore);
-                //console.log(`You win! ${humanChoice} beats ${computerChoice}.`);        //player win
             }
         }
     }
