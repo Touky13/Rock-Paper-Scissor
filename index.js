@@ -1,4 +1,4 @@
-//console.log(`Hello World`);                             //html link test
+console.log(`Hello World`);                             //html link test
 
 //Computer
 function getComputerChoice(computer) {                  
