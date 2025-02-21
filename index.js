@@ -18,12 +18,10 @@ let computerScore = 0;
 function winner() {
         let winner = Math.max(humanScore, computerScore);
             if (winner === humanScore) {
-                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 setTimeout (function() {
                 if (confirm(`The player win !\nThe score is Computer : ` + computerScore + `  player : ` + humanScore) == true) { return resetClicked();}
                 else {resetClicked()}}, 1)
             } else {
-                score.textContent = (`The score is Computer : ` + computerScore + `  player : ` + humanScore);
                 setTimeout (function() {
                 if (confirm(`The computer win !\nThe score is Computer : ` + computerScore + `  player : ` + humanScore) == true) {return resetClicked();}
                 else {resetClicked()}}, 1)
