@@ -9,18 +9,15 @@ body {
 }
 
 .text {
-    display: flex;   
-    flex-direction: column;
     text-align: center;
-    justify-content: center;
 }
 
 .selection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
     font-size: 2em;
+}
+
+#computerSelection {
+    margin-bottom: 15px;
 }
 
 #roundResult {
@@ -38,6 +35,8 @@ button {
     border: 3px solid black;
     border-radius: 5px;
     padding: 50px;
+    background-color: white;
+    background-size: 100% 100%;
 }
 
 button:hover {
@@ -53,26 +52,19 @@ button:hover {
 
 #rockBtn {
     background-image: url(https://www.pinclipart.com/picdir/big/559-5590543_rock-paper-scissors-png-clipart.png);
-    background-size: 100% 100%;
-    background-color: white;
 }
 
 #paperBtn {
     background-image: url(https://www.pinclipart.com/picdir/big/51-511523_rock-paper-rock-paper-scissors-clipart-png-download.png);
-    background-size: 100% 100%;
-    background-color: white;
 }
 
 #scissorsBtn {
     background-image: url(https://www.vhv.rs/dpng/f/535-5357819_rock-paper-scissors-png.png);
-    background-color: white;
-    background-size: 100% 100%;
 }
 
 #resetBtn {
     font-size: 2em;
     padding: 10px 40px;
-    background-color: white;
     width: 25vw;
     display: flex;
     justify-content: center;
