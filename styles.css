@@ -1,0 +1,77 @@
+body {
+    font-family: Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0px;
+}
+
+.text {
+    display: flex;   
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2em;
+}
+
+#roundResult {
+    margin: 25px 0px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#score {
+    font-size: 2em;
+}
+
+button {
+    margin-top: 50px;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 50px;
+}
+
+button:hover {
+    transform: scale(1.5);
+}
+
+.buttonsPlayer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#rockBtn {
+    background-image: url(/images/rock);
+    background-size: 100% 100%;
+}
+
+#paperBtn {
+    background-image: url(/images/paper);
+    background-size: 100% 100%;
+}
+
+#scissorsBtn {
+    background-image: url(/images/scissors);
+    background-size: 100% 100%;
+}
+
+#resetBtn {
+    font-size: 2em;
+    padding: 10px 40px;
+    background-color: white;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
