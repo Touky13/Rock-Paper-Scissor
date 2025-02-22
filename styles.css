@@ -52,17 +52,20 @@ button:hover {
 }
 
 #rockBtn {
-    background-image: url(/images/rock);
+    background-image: url(https://www.pinclipart.com/picdir/big/559-5590543_rock-paper-scissors-png-clipart.png);
     background-size: 100% 100%;
+    background-color: white;
 }
 
 #paperBtn {
-    background-image: url(/images/paper);
+    background-image: url(https://www.pinclipart.com/picdir/big/51-511523_rock-paper-rock-paper-scissors-clipart-png-download.png);
     background-size: 100% 100%;
+    background-color: white;
 }
 
 #scissorsBtn {
-    background-image: url(/images/scissors);
+    background-image: url(https://www.vhv.rs/dpng/f/535-5357819_rock-paper-scissors-png.png);
+    background-color: white;
     background-size: 100% 100%;
 }
 
